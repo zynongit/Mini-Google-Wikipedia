@@ -4,7 +4,7 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
     let consulta = document.getElementById('consulta').value;
 
     if (consulta) {
-        fetch(`https://pt.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${consulta}&utf8=1`)
+fetch(`https://cors-anywhere.herokuapp.com/https://pt.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${consulta}&utf8=1`)
             .then(response => response.json())
             .then(data => {
                 let resultados = data.query.search;
